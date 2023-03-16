@@ -1,6 +1,7 @@
 package com.alibou.springdemo.Student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -12,7 +13,7 @@ public class StudentController {
 
     private final StudentService service ;
     @Autowired
-    public StudentController(StudentService service) {this.service = service;}
+    public StudentController(@Qualifier("DBStudentService") StudentService service) {this.service = service;}
 
     @PostMapping
     public Student save(@RequestBody Student student){
