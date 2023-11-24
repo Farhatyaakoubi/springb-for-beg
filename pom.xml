@@ -50,6 +50,7 @@
 	<build>
 		<plugins>
 			<plugin>
+				<finalname>test1</finalname>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
